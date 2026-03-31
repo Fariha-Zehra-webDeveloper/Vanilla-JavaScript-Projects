@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+:root{
+     /* Primary */
+  --clr-Purple-500: hsl(259, 100%, 65%);
+  --clr-Red-400: hsl(0, 100%, 67%);
+   /* Neutral */
+  --clr-White: hsl(0, 100%, 100%);
+  --clr-Grey-100: hsl(0, 0%, 94%);
+  --clr-Grey-200: hsl(0, 0%, 86%);
+  --clr-Grey-500: hsl(0, 1%, 44%);
+  --clr-Black: hsl(0, 0%, 0%);
+}
+body{
+    min-height: 100svh;
+    background-color: var(--clr-Grey-100);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Poppins';
+    gap: 1.875rem;
+}
+.calculator-container{
+    width: 90%;
+    background-color: var(--clr-White);
+    max-width: 23rem;
+    border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+
+}
+.inputs-container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.input-grp{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input{
+    width: 75%;
+    border-radius: 0.5rem;
+    padding:1rem 0.4rem ;
+    color: var(--clr-Black);
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: 1px solid var(--clr-Grey-200);
+}
+input::placeholder{
+    color: var(--clr-Grey-500);
+}
+.input-grp.error input{
+    border-color: var(--clr-Red-400);
+}
+.input-grp.error label{
+    color: var(--clr-Red-400);
+}
+input:focus{
+    outline: none;
+    border-color: var(--clr-Purple-500);
+    cursor: pointer;
+}
+label{
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+    color: var(--clr-Grey-500);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.error-msg{
+    color: var(--clr-Red-400);
+    font-style: italic;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    display: none;
+}
+.input-grp.error .error-msg{
+    display: block;
+}
+.divider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    position: relative;
+}
+hr{
+    width: 100%;
+    position:absolute;
+    border-top: 0.063rem solid var(--clr-Grey-200);
+}
+button{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    z-index: 1;
+    background: var(--clr-Purple-500);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button img{
+    width: 2rem;
+}
+button:hover{
+    background: var(--clr-Black);
+}
+.result-display p{
+   font-size: 4rem;
+   font-weight: 800;
+   font-style: italic;
+   line-height: 1.2;
+   margin: 0;
+   text-transform: lowercase;
+}
+.result-display span{
+    color: var(--clr-Purple-500);
+}
+@media (min-width:59em) {
+.calculator-container{
+    width: 90%;
+    background-color: var(--clr-White);
+    max-width: 34rem;
+    border-radius: 1.25rem 1.25rem 9.375rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.age-form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width: 100%;
+}
+.inputs-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width:80%;
+}
+.input-grp{
+    display: flex;
+    flex-direction: column;
+    width: 7.256rem;
+}
+input{
+    border-radius: 0.5rem;
+    padding:0.75rem 1rem ;
+    color: var(--clr-Black);
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 1px solid var(--clr-Grey-200);
+}
+
+label{
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+    color: var(--clr-Grey-500);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.divider{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+}
+hr{
+    flex: 1;
+    border: none;
+    border-top: 0.063rem solid var(--clr-Grey-200);
+}
+button{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--clr-Purple-500);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button img{
+    width: 2rem;
+}
+button:hover{
+    background: var(--clr-Black);
+}
+.result-display p{
+   font-size: 4rem;
+   font-weight: 800;
+   font-style: italic;
+   line-height: 1.2;
+   margin: 0;
+   text-transform: lowercase;
+}
+.result-display span{
+    color: var(--clr-Purple-500);
+}
+}
