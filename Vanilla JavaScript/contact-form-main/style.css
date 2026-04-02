@@ -213,16 +213,7 @@ align-items: center;
     color: var(--clr-Green-200);
 }
 @media (min-width:59em){
-    body{
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: 'Karla';
-    overflow: hidden;
-    background-color: var(--clr-Green-200);
-}
+    
  .container{
     width: 90%;
     max-width: 500px;
