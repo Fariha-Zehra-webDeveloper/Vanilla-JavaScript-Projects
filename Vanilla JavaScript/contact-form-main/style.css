@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+:root{
+     /* Primary */
+--clr-Green-200: hsl(148, 38%, 91%);
+--clr-Green-600: hsl(169, 82%, 27%);
+--clr-Red: hsl(0, 66%, 54%);
+   /* Neutral */
+--clr-White: hsl(0, 0%, 100%);
+--clr-Grey-500: hsl(186, 15%, 59%);
+--clr-Grey-900: hsl(187, 24%, 22%);
+}
+body{
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Karla';
+    background-color: var(--clr-Green-200);
+}
+.container{
+    width: 90%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-White);
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+.cont{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: -0.1rem;
+}
+.contct-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inpt-grp{
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem; 
+}
+.first-name, .last-name, .email, .msg{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.8rem;
+}
+.name:hover, .mail:hover, .mssg:hover,.qry-box:hover{
+    border: 1px solid var(--clr-Green-600);;
+}
+.check label{
+    cursor: pointer;
+}
+.chk{
+    font-size: 0.8rem;
+    color: var(--clr-Grey-900);
+}
+.query-supp label{
+    display: none;
+}
+.qry-box{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem;
+    border: 1px solid var(--clr-Grey-500);
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+}
+.qry-box input[type="radio"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    accent-color: var(--clr-Green-600); 
+}
+.qry-box span {
+    font-size: 1rem;
+    color: var(--clr-Grey-900);
+}
+.qry-box:has(input[type="radio"]:checked) {
+    background-color: var(--clr-Green-200);
+    border: 1px solid var(--clr-Green-600);
+}
+.name:focus, .mail:focus, .mssg:focus {
+    outline: none;
+    border: 1px solid var(--clr-Green-600);
+}
+.query-section .error-msg{
+    width: 100%;
+    margin-top: -0.5rem;
+    color: var(--clr-Red);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: none;
+}
+.query-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.query-gen,.query-supp{
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+    flex: 1;
+    min-width:140px ;
+}
+
+.first-name .error-msg, .last-name .error-msg,.email .error-msg, .error-msg,.msg .error-msg {
+    margin-top: 0.4rem;
+    color: var(--clr-Red);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: none;
+}
+.chk{
+ display: flex;
+ flex-direction: column;
+ gap: 0.8rem;
+ 
+}
+.check{
+display: flex;
+align-items: center;
+ gap: 0.5rem;
+ 
+}
+.chk .error-msg{
+    color: var(--clr-Red);
+    font-size: 0.9rem;
+    font-weight: 600; 
+    display: none;
+}
+.check input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--clr-Green-600); 
+}
+.name,.mail{
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--clr-Grey-500);
+  width: 100%;
+  box-sizing: border-box;
+   cursor: pointer;
+}
+.mssg{
+  padding: 5rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--clr-Grey-500);
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.first-name label, .last-name label,.email label,.msg label{
+    font-size: 0.9rem;
+    color: var(--clr-Grey-900);
+    font-weight: 700;
+}
+.str{
+    color: var(--clr-Green-600);
+}
+.btn{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: var(--clr-Green-600);
+    color: var(--clr-White);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+   background-color: var(--clr-Green-200);
+   color: black;
+}
+.btn:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+.success-banner {
+    position: fixed;
+    top: -150px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--clr-Grey-900);
+    color: var(--clr-White);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    width: 90%;
+    max-width: 400px;
+    transition: 0.5s ease;
+    z-index: 1000;
+}
+.success-banner.show {
+    top: 20px;
+}
+.success-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.success-banner p {
+    font-size: 0.9rem;
+    color: var(--clr-Green-200);
+}
+@media (min-width:59em){
+    body{
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Karla';
+    overflow: hidden;
+    background-color: var(--clr-Green-200);
+}
+ .container{
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-White);
+    padding: 2rem;
+    border-radius: 0.8rem;
+}
+.cont{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: -0.1rem;
+}
+.contct-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inpt-grp{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.query-supp label{
+    display: block;
+}
+.mssg{
+  padding: 2rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--clr-Grey-500);
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+}

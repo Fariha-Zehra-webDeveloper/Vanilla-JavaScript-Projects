@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.9rem; text-align: center;
+    margin-top: 2rem; }
+    .attribution a { color: hsl(169, 82%, 27%); }
+  </style>
+</head>
+<body>
+  <div id="success-msg" class="success-banner">
+    <div class="success-header">
+      <img src="./assets/images/icon-success-check.svg" alt="success"> 
+      <span>Message Sent!</span>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+<main class="container">
+      <form class="contct-form">
+             <h1 class="cont">Contact Us</h1>
+             <div class="inpt-grp">
+              <div class="first-name">
+                     <label for="name">First Name <span class="str">*</span></label>
+                     <input id="first" class="name" type="text">
+                     <p class="error-msg">This field is required</p>
+              </div>
+                <div class="last-name">
+                     <label for="name">Last Name <span class="str">*</span></label>
+                     <input id="last" class="name" type="text">
+                     <p class="error-msg">This field is required</p>
+                </div> 
+                 
+             </div>
+             <div class="inpt-grp">
+              <div class="email">
+                  <label for="email">Email Address <span class="str">*</span></label>
+                  <input class="mail" type="email">
+                  <p class="error-msg">Please enter a valid email address</p>
+              </div> 
+             </div>
+            <div class="inpt-grp query-section">
+              <div class="query-gen">
+                   <label class="q-label">Query Type <span class="str">*</span></label>
+                   <div class="qry-box">
+                      <input type="radio" id="general" name="query">
+                      <span>General Enquiry</span>
+                   </div>
+              </div>
+               <div class="query-supp">
+                 <label class="q-label">Query Type <span class="str">*</span></label>
+                <div class="qry-box">
+                  <input id="support" name="query" type="radio">
+                  <span>Support Request</span> 
+                </div>
+                   </div>  
+                   <p class="error-msg">Please select a query type</p> 
+             </div>
+            <div class="inpt-grp">
+              <div class="msg">
+                <label for="msg">Message <span class="str">*</span></label>
+                 <input class="mssg" type="text">
+                 <p class="error-msg">This field is required</p>
+              </div>
+             </div>
+             <div class="chk">
+              <div class="check">
+                      <input type="checkbox" id="consent"> 
+                       <label for="consent">I consent to being contacted by the team <span class="str">*</span></label>
+                    
+              </div>
+                       <p class="error-msg">To submit this form, please consent to being contacted</p>
+             </div>
+            <button class="btn" type="submit">Submit</button>
+      </form>
+</main>
+ 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Fariha Zehra</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
