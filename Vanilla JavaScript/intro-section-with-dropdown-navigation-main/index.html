@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+</head>
+<body>
+
+<header>
+  <nav>
+     <div class="logo">
+      <img src="./images/logo.svg" alt="snap">
+     </div>
+     <div class="icon"><i class="fa-solid fa-bars"></i></div>
+     <div class="navlinks">
+       <i class="fa fa-times" id="closeMenu"></i>
+       <div class="nav-left">
+          <div class="dropdown" >
+          <button class="dropbtn">Features <img src="./images/icon-arrow-down.svg" alt=""></button>
+          <div class="dropdown-content">
+            <a href="#"><img src="./images/icon-todo.svg" alt="">Todo List</a>
+            <a href="#"><img src="./images/icon-calendar.svg" alt="">Calender</a>
+            <a href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a>
+            <a href="#"><img src="./images/icon-planning.svg" alt="">Planning</a>
+          </div>
+        </div>
+             <div class="dropdown" >
+          <button class="dropbtn">Company <img src="./images/icon-arrow-down.svg" alt=""></button>
+          <div class="dropdown-content">
+            <a href="#">History</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+       <a href="" >Careers </a>
+       <a href="" >About</a>
+
+       </div>
+        
+     
+       <div class="reg">
+     <a href="" >Login</a>
+     <a href="" >Register</a>
+  </div>
+     </div>
+  </nav>
+</header>
+<div class="overlay" id="overlay"></div>
+<main>
+  <div class="content">
+     <h1> Make remote work</h1>
+     <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+      <button class="learn-btn">Learn more</button>
+      <div class="company-names">
+          <a href=""><img src="./images/client-databiz.svg" alt=""></a>
+          <a href=""><img src="./images/client-audiophile.svg" alt=""></a>
+          <a href=""><img src="./images/client-meet.svg" alt=""></a>
+          <a href=""><img src="./images/client-maker.svg" alt=""></a>
+      </div>
+  </div>
+  <div class="img-box">
+   
+    
+    <img src="./images/image-hero-mobile.png" alt="hero" class="hero-img">
+  
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
